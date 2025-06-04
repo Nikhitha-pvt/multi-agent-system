@@ -1,0 +1,18 @@
+{
+    "invoice_number": "INV-1001",
+    "date": "2024-06-03",
+    "customer": {
+      "id": "cust_003",
+      "name": "Acme Corp"
+    },
+    "items": [
+      {
+        "description": "Consulting Services",
+        "quantity": 10,
+        "unit_price": 150.0
+      }
+    ],
+    "total": 1500.0,
+    "currency": "USD"
+  }
+  

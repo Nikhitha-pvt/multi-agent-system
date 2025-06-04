@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pydantic
+sqlalchemy
+PyPDF2
+requests
+python-dotenv
+# openai
+langchain
+langchain-community
+together
+faker
+streamlit

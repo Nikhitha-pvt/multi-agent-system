@@ -1,0 +1,13 @@
+From:jane.doe@example.com
+To:jane.doe@example.com
+Subject: Product Malfunction - Immediate Attention Required
+
+Body:
+Dear Customer Support,
+
+I bought the XYZ gadget from your store last week, but now it is not working. I have tried the steps in the manual, but it still won't turn on. This is very frustrating.
+
+Please let me know how I can return it or get a replacement.
+
+Thank you,  
+Jane Doe

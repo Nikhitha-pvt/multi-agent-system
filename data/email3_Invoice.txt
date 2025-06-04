@@ -1,0 +1,15 @@
+From:alex.johnson@consultingpro.com
+To:accounts@clientcompany.com
+
+Subject: Invoice #12345 for Services Rendered
+
+
+Body:
+Dear Accounts Team,
+
+Please find attached Invoice #12345 for the consulting services I provided in May. The total amount is $5,000, and it is due within 30 days.
+
+Let me know if you have any questions.
+
+Thank you,  
+Alex Johnson

@@ -1,0 +1,11 @@
+{
+    "id": "evt_12345",
+    "event_type": "payment_success",
+    "timestamp": "2024-06-01T12:00:00Z",
+    "payload": {
+      "customer_id": "cust_001",
+      "amount": 5000.75,
+      "currency": "USD"
+    }
+  }
+  

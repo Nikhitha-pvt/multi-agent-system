@@ -1,0 +1,11 @@
+{
+    "id": "comp_67890",
+    "event_type": "customer_complaint",
+    "timestamp": "2024-06-02T09:30:00Z",
+    "payload": {
+      "customer_id": "cust_002",
+      "issue": "Received damaged product",
+      "details": "The packaging was torn, and the item was scratched."
+    }
+  }
+  

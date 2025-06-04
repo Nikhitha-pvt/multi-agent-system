@@ -1,0 +1,18 @@
+From:john.smith@newbranchcorp.com
+To:sales@stationeryworld.com
+
+Subject: Request for Quotation for Office Supplies
+
+Body:
+Hello,
+
+We are setting up a new office and need to buy supplies. Could you please send us a price quote for the following items in bulk?
+
+- Pens  
+- Notepads  
+- Staplers
+
+We would appreciate your response as soon as possible.
+
+Best regards,  
+John Smith
