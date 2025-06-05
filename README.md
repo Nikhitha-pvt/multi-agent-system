@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # multi-agent-system
 Multi-Format Autonomous AI System with Contextual Decisioning &amp; Chained Actions
 =======

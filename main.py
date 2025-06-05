@@ -65,25 +65,20 @@ def get_memory():
 from pydantic import BaseModel
 from typing import Any
 
-class JSONPayload(BaseModel):
-    {
-    "data": {
-    "id": "evt_12345",
-    "event_type": "payment_success",
-    "timestamp": "2024-06-01T12:00:00",
-    "payload": {
-      "customer_id": "cust_001",
-      "amount": 5000.75,
-      "currency": "USD"
-    }
-  }
-}
+
+from fastapi import HTTPException
 
 @app.post("/process/json/")
 async def handle_json(request: Request):
-    data = await request.json()
-    # For direct JSON, we don't have a filename, so use 'direct_payload' as source
-    input_id = memory_store.log_input(source="direct_payload", input_type="JSON", intent="Unknown", metadata=None)
-    result = process_json(data, source="direct_payload", input_id=input_id)
-    action_result = route_action("JSONAgent", result, input_id)
-    return {"extraction": result, "action": action_result}
+    try:
+        data = await request.json()
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Invalid JSON input: {str(e)}")
+
+    try:
+        input_id = memory_store.log_input(source="direct_payload", input_type="JSON", intent="Unknown", metadata=None)
+        result = process_json(data, source="direct_payload", input_id=input_id)
+        action_result = route_action("JSONAgent", result, input_id)
+        return {"extraction": result, "action": action_result}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Processing error: {str(e)}")

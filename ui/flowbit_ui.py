@@ -54,10 +54,29 @@ if st.button("View Memory Logs") and api_available:
                 else:
                     logs = resp.json()
 
-                if not isinstance(logs, list):
-                    st.error("Expected a list of logs but got a different format")
+                if not isinstance(logs, dict):
+                    st.error("Expected a dictionary of logs grouped by type")
                     st.code(logs, language="json")
                     raise ValueError("Invalid log format")
+
+                for log_type, log_entries in logs.items():
+                    st.write(f"## {log_type.capitalize()} Logs")
+                    if not log_entries:
+                        st.write("No logs.")
+                        continue
+                    for log in log_entries:
+                        st.write("---")
+                        if 'timestamp' in log:
+                            try:
+                                timestamp = datetime.fromisoformat(log['timestamp'])
+                                formatted_time = timestamp.strftime("%Y-%m-%d %H:%M:%S")
+                                st.write(f"**Time:** {formatted_time}")
+                            except (ValueError, TypeError):
+                                st.write(f"**Time:** {log['timestamp']} (raw)")
+                        for key, value in log.items():
+                            if key != '_sa_instance_state':
+                                st.write(f"**{key.capitalize()}**: {value}")
+
 
                 # Format the logs for better display
                 st.write("### Processing History")
