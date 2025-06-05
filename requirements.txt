@@ -5,7 +5,6 @@ sqlalchemy
 PyPDF2
 requests
 python-dotenv
-# openai
 langchain
 langchain-community
 together

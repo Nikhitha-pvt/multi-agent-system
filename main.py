@@ -60,7 +60,6 @@ def get_memory():
     )
     return JSONResponse(content=serialized_logs)
 
-# (Other agent endpoints will be added/updated in later steps)
 
 from pydantic import BaseModel
 from typing import Any
