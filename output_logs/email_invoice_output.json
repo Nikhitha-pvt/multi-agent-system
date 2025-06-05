@@ -1,0 +1,20 @@
+{
+  "filename": "email2_RFQ.txt",
+  "format": "Email",
+  "intent": "Invoice",
+  "input_id": 84,
+  "status": "classified",
+  "extraction": {
+    "sender": "John Smith",
+    "urgency": "medium",
+    "tone": "polite",
+    "intent": "RFQ",
+    "request_or_issue": "Request for price quote for office supplies."
+  },
+  "action": {
+    "action": "LOG /crm/close",
+    "details": {
+      "escalate": false
+    }
+  }
+}

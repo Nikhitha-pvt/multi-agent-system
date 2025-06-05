@@ -1,0 +1,23 @@
+{
+  "filename": "sample-invoice.pdf",
+  "format": "PDF",
+  "intent": "General",
+  "input_id": 87,
+  "status": "classified",
+  "extraction": {
+    "invoice_total": 38112,
+    "compliance_mentions": [],
+    "intent": "Invoice",
+    "flags": [
+      "High value invoice: $38,112.00"
+    ]
+  },
+  "action": {
+    "action": "POST /risk_alert",
+    "details": {
+      "flags": [
+        "High value invoice: $38,112.00"
+      ]
+    }
+  }
+}
